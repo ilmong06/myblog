@@ -165,7 +165,6 @@ input, select, textarea {
 		font-weight: 400;
 		color: #ffffffc3;
 	}
-
 	h1 {
 		font-size: 2.4em; /* 글자 크기 */
 		letter-spacing: -0.015em; /* 글자 간격 */
@@ -173,10 +172,10 @@ input, select, textarea {
 		padding: 10px;
 		color: #fff; /* 글자 색 */
 		text-shadow: 
-			1px 1px 0 #272727, /* 위쪽 */
-			-1px -1px 0 #272727, /* 왼쪽 */
-			1px -1px 0 #272727, /* 오른쪽 */
-			-1px 1px 0 #272727; /* 아래쪽 */
+			0px 0px 1px rgba(255, 255, 255, 0.2), /* 가장 가까운 그림자 */
+			0px 0px 2px rgba(255, 255, 255, 0.2), /* 조금 더 퍼진 그림자 */
+			0px 0px 3px rgba(255, 255, 255, 0.2), /* 더 퍼진 그림자 */
+			0px 0px 4px rgba(255, 255, 255, 0.2); /* 더 퍼진 그림자 */
 	}
 
 	h2 {
@@ -600,8 +599,8 @@ input, select, textarea {
 
 	
 	#link2 {
-		top: 69.5%;
-		right: 38%;
+		top: 69.4%;
+		right: 37.5%;
 		transform: rotate(349deg);
 	}
 	
