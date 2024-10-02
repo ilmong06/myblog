@@ -549,37 +549,64 @@ input, select, textarea {
 		width: 100%;
 		height: 100%;
 	}
+	.separator {
+		margin: 0 10px; /* 링크 간의 간격을 조정 */
+		font-size: 24px; /* | 기호 크기 조정 */
+		position: relative;
+		display: inline-block; /* inline-block으로 위치 조정 */
+	}
 	
+	.separator#separator1 {
+		position: relative;
+		top: 70%;
+		right: 5%;
+		transform: rotate(9deg);
+	}
+	
+	.separator#separator2 {
+		position: relative;
+		top: 71%;
+		right: 0%;
+		transform: rotate(0deg);
+	}
+	
+	.separator#separator3 {
+		position: relative;
+		top: 70%;
+		left: 5%;
+		transform: rotate(350deg);
+	}
 	.link {
 		position: absolute;
 		color: #fff;
 		text-decoration: none;
 		font-size: 16px;
-		font-weight: bold;
+		font-family:  'ChosunGs';
 	}
 	
 	#link1 {
-    top: 35.5%;
-    left: 10%;
-    transform: rotate(46deg);
-}
+		top: 69.1%;
+		left: 38%;
+		transform: rotate(11deg);
+	}
+
 	
 	#link2 {
-		top: 36%;
-		right: 10%;
-		transform: rotate(309deg);
+		top: 69.5%;
+		right: 38%;
+		transform: rotate(349deg);
 	}
 	
 	#link3 {
-		bottom: 32%;
-		left: 30%;
-		transform: rotate(19deg);
+		bottom: 23.8%;
+		left: 45.3%;
+		transform: rotate(2deg);
 	}
 	
 	#link4 {
-		bottom: 32%;
-		right: 30%;
-		transform: rotate(343deg);
+		bottom: 23.8%;
+		right: 45%;
+		transform: rotate(357deg);
 	}
 	
 	.link:hover {
