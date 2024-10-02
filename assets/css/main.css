@@ -660,10 +660,6 @@ input, select, textarea {
         overflow-x: hidden; /* 화면 가로로 이동 방지 */
     }
     
-    #footer {
-        font-size: 0.75em; /* PC 버전의 폰트 크기를 유지 */
-        padding: 2em 0 0 0; /* 패딩 유지 */
-    }
 
     .separator {
         margin: 0 10px; /* 링크 간의 간격을 조정 */
