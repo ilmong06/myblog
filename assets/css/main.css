@@ -666,6 +666,33 @@ input, select, textarea {
 						font-size: 0.75em; /* PC 버전의 폰트 크기를 유지 */
 						padding: 2em 0 0 0; /* 패딩 유지 */
 					}
+					.separator {
+						margin: 0 10px; /* 링크 간의 간격을 조정 */
+						font-size: 16px; /* | 기호 크기 조정 */
+						position: relative;
+						display: inline-block; /* inline-block으로 위치 조정 */
+					}
+					
+					.separator#separator1 {
+						position: relative;
+						top: 69%;
+						right: 8%;
+						transform: rotate(9deg);
+					}
+					
+					.separator#separator2 {
+						position: relative;
+						top: 69.8%;
+						right: 0%;
+						transform: rotate(0deg);
+					}
+					
+					.separator#separator3 {
+						position: relative;
+						top: 69%;
+						left: 8%;
+						transform: rotate(350deg);
+					}
 				
 					.link {
 						font-size: 16px; /* 링크 폰트 사이즈 유지 */
@@ -673,27 +700,28 @@ input, select, textarea {
 				
 					/* 링크 위치와 회전 상태 유지 */
 					#link1 {
-						top: 69.1%;
-						left: 38%;
+						top: 69%;
+						left: 20%;
 						transform: rotate(11deg);
 					}
 				
 					
 					#link2 {
-						top: 69.4%;
-						right: 37.5%;
-						transform: rotate(349deg);
+						top: 68.9%;
+						right: 17%;
+						transform: rotate(350deg);
 					}
+				}
 					
 					#link3 {
-						bottom: 23.8%;
-						left: 45.3%;
-						transform: rotate(2deg);
+						top: 70%;
+						left: 38%;
+						transform: rotate(1deg);
 					}
 					
 					#link4 {
-						bottom: 23.8%;
-						right: 45%;
+						top: 70%;
+						right: 37%;
 						transform: rotate(356deg);
 					}
 					
@@ -701,5 +729,5 @@ input, select, textarea {
 					.separator {
 						font-size: 24px; /* 분리 기호 크기 유지 */
 					}
-				}
+				
 		
