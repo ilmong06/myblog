@@ -42,10 +42,16 @@ footer, header, hgroup, menu, nav, section {
 		font-weight: normal;
 		font-style: normal;
 	}
+	@font-face {
+		font-family: 'ChosunGs';
+		src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
 
 body {
 	line-height: 1;
-	font-family:  'Calibri';
+	font-family:  'Calibri','ChosunGs';
 }
 
 ol, ul {
@@ -98,11 +104,10 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #313131;
-		background-repeat: repeat, no-repeat;
-		background-size: auto, 100% 100%;
-		background-attachment: fixed;
-		overflow-y: scroll;
+		background-image: url("images/1.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -158,13 +163,13 @@ input, select, textarea {
 
 	strong, b, h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
-		color: #1e1e1e;
+		color: #ffffffc3;
 	}
 
 	h1 {
 		font-size: 2.4em;
 		letter-spacing: -0.015em;
-		font-family: 'EF_jejudoldam';
+		font-family: 'ChosunGs';
 	}
 
 	h2 {
@@ -333,7 +338,7 @@ input, select, textarea {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		background: #ffffff;
+		background: #ffffff6f;
 		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
 		-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 		-webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
@@ -536,6 +541,50 @@ input, select, textarea {
 		padding: 2em 0 0 0;
 		font-size: 0.75em;
 	}
+	.custom-links {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+	}
+	
+	.link {
+		position: absolute;
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: bold;
+	}
+	
+	#link1 {
+    top: 35.5%;
+    left: 10%;
+    transform: rotate(46deg);
+}
+	
+	#link2 {
+		top: 36%;
+		right: 10%;
+		transform: rotate(309deg);
+	}
+	
+	#link3 {
+		bottom: 32%;
+		left: 30%;
+		transform: rotate(19deg);
+	}
+	
+	#link4 {
+		bottom: 32%;
+		right: 30%;
+		transform: rotate(343deg);
+	}
+	
+	.link:hover {
+		color: #ffdd00;
+	}
 
 		#footer a {
 			color: #ddd;
@@ -577,3 +626,4 @@ input, select, textarea {
 			}
 
 		}
+		
