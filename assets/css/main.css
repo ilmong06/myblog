@@ -29,8 +29,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	@font-face {
+		font-family: 'Calibri';
+		src: url('assets/fonts/Calibri.woff2') format('woff2'),
+			 url('assets/fonts/Calibri.woff') format('woff'),
+			 url('assets/fonts/Calibri.ttf') format('truetype');
+	}
+
 body {
 	line-height: 1;
+	font-family:  'Calibri';
 }
 
 ol, ul {
@@ -102,7 +110,7 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Calibri';
 		font-weight: 300;
 		color: #777777;
 		font-size: 20pt;
