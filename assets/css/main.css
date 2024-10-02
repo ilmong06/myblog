@@ -167,9 +167,16 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-size: 2.4em;
-		letter-spacing: -0.015em;
-		font-family: 'ChosunGs';
+		font-size: 2.4em; /* 글자 크기 */
+		letter-spacing: -0.015em; /* 글자 간격 */
+		font-family: 'ChosunGs'; /* 폰트 */
+		padding: 10px;
+		color: #fff; /* 글자 색 */
+		text-shadow: 
+			1px 1px 0 #272727, /* 위쪽 */
+			-1px -1px 0 #272727, /* 왼쪽 */
+			1px -1px 0 #272727, /* 오른쪽 */
+			-1px 1px 0 #272727; /* 아래쪽 */
 	}
 
 	h2 {
