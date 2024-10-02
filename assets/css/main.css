@@ -726,3 +726,68 @@ input, select, textarea {
         font-size: 16px; /* 분리 기호 크기 유지 */
     }
 }
+/* 아이폰 8(667px 이하) 대응 */
+@media screen and (max-width: 667px) {
+    body {
+        overflow-x: hidden; /* 가로 스크롤 방지 */
+    }
+
+    #footer {
+        font-size: 0.7em; /* 더 작은 폰트 크기 */
+        padding: 1.5em 0 0 0;
+    }
+
+    .separator {
+        margin: 0 8px; /* 간격 좁힘 */
+        font-size: 14px; /* 작은 화면에서의 분리 기호 크기 */
+    }
+
+    .separator#separator1 {
+        position: relative;
+        top: 68%;
+        right: 6%;
+        transform: rotate(9deg);
+    }
+
+    .separator#separator2 {
+        position: relative;
+        top: 68.8%;
+        right: 0%;
+        transform: rotate(0deg);
+    }
+
+    .separator#separator3 {
+        position: relative;
+        top: 68%;
+        left: 6%;
+        transform: rotate(350deg);
+    }
+
+    .link {
+        font-size: 14px; /* 더 작은 텍스트 */
+    }
+
+    #link1 {
+        top: 63%;
+        left: 15%;
+        transform: rotate(11deg);
+    }
+
+    #link2 {
+        top: 63%;
+        right: 15%;
+        transform: rotate(350deg);
+    }
+
+    #link3 {
+        bottom: 18%;
+        left: 30%;
+        transform: rotate(1deg);
+    }
+
+    #link4 {
+        bottom: 18%;
+        right: 30%;
+        transform: rotate(356deg);
+    }
+}
