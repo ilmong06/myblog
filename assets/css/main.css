@@ -539,195 +539,190 @@ input, select, textarea {
 
 				}
 
-/* Footer */
+/* 기본 스타일 (PC 버전) */
+#footer {
+    color: rgba(255, 255, 255, 0.45);
+    text-align: center;
+    padding: 2em 0 0 0;
+    font-size: 0.75em;
+}
 
-	#footer {
-		color: rgba(255, 255, 255, 0.45);
-		text-align: center;
-		padding: 2em 0 0 0;
-		font-size: 0.75em;
-	}
-	.custom-links {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-		height: 100%;
-	}
-	.separator {
-		margin: 0 10px; /* 링크 간의 간격을 조정 */
-		font-size: 24px; /* | 기호 크기 조정 */
-		position: relative;
-		display: inline-block; /* inline-block으로 위치 조정 */
-	}
-	
-	.separator#separator1 {
-		position: relative;
-		top: 70%;
-		right: 5%;
-		transform: rotate(9deg);
-	}
-	
-	.separator#separator2 {
-		position: relative;
-		top: 71%;
-		right: 0%;
-		transform: rotate(0deg);
-	}
-	
-	.separator#separator3 {
-		position: relative;
-		top: 70%;
-		left: 5%;
-		transform: rotate(350deg);
-	}
-	.link {
-		position: absolute;
-		color: #fff;
-		text-decoration: none;
-		font-size: 16px;
-		font-family:  'ChosunGs';
-		transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
-	}
-	
-	#link1 {
-		top: 69.1%;
-		left: 38%;
-		transform: rotate(11deg);
-	}
+.custom-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
 
-	
-	#link2 {
-		top: 69.4%;
-		right: 37.5%;
-		transform: rotate(349deg);
-	}
-	
-	#link3 {
-		bottom: 23.8%;
-		left: 45.3%;
-		transform: rotate(2deg);
-	}
-	
-	#link4 {
-		bottom: 23.8%;
-		right: 45%;
-		transform: rotate(356deg);
-	}
-	
-	.link:hover {
-		color: #ffdd00;
-		text-shadow: 
-			0px 0px 10px rgba(255, 221, 0, 0.8),
-			0px 0px 20px rgba(255, 221, 0, 0.8),
-			0px 0px 30px rgba(255, 221, 0, 0.8);
-	}
+.separator {
+    margin: 0 10px; /* 링크 간의 간격을 조정 */
+    font-size: 24px; /* | 기호 크기 조정 */
+    position: relative;
+    display: inline-block; /* inline-block으로 위치 조정 */
+}
 
-		#footer a {
-			color: #ddd;
-			color: rgba(255, 255, 255, 0.65);
-			-moz-transition: color .25s ease-in-out;
-			-webkit-transition: color .25s ease-in-out;
-			-ms-transition: color .25s ease-in-out;
-			transition: color .25s ease-in-out;
-		}
+.separator#separator1 {
+    position: relative;
+    top: 70%;
+    right: 5%;
+    transform: rotate(9deg);
+}
 
-			#footer a:hover {
-				color: white;
-			}
+.separator#separator2 {
+    position: relative;
+    top: 71%;
+    right: 0%;
+    transform: rotate(0deg);
+}
 
-		#footer .copyright {
-			list-style: none;
-			padding-left: 0;
-		}
+.separator#separator3 {
+    position: relative;
+    top: 70%;
+    left: 5%;
+    transform: rotate(350deg);
+}
 
-			#footer .copyright li {
-				display: inline-block;
-				padding-left: 1em;
-				margin-left: 1em;
-				border-left: solid 1px rgba(255, 255, 255, 0.25);
-				line-height: 1;
-			}
+.link {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'ChosunGs';
+    transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
+}
 
-				#footer .copyright li:first-child {
-					padding-left: 0;
-					margin-left: 0;
-					border-left: 0;
-				}
+#link1 {
+    top: 69.1%;
+    left: 38%;
+    transform: rotate(11deg);
+}
 
-				@media screen and (max-width: 736px) {
-					/* 모바일 화면에서 PC 버전 레이아웃 유지하기 */
-					body {
-						overflow-x: hidden; /* 화면 가로로 이동 방지 */
-					}
-				
-					#footer {
-						font-size: 0.75em; /* PC 버전의 폰트 크기를 유지 */
-						padding: 2em 0 0 0; /* 패딩 유지 */
-					}
-					.separator {
-						margin: 0 10px; /* 링크 간의 간격을 조정 */
-						font-size: 16px; /* | 기호 크기 조정 */
-						position: relative;
-						display: inline-block; /* inline-block으로 위치 조정 */
-					}
-					
-					.separator#separator1 {
-						position: relative;
-						top: 69%;
-						right: 8%;
-						transform: rotate(9deg);
-					}
-					
-					.separator#separator2 {
-						position: relative;
-						top: 69.8%;
-						right: 0%;
-						transform: rotate(0deg);
-					}
-					
-					.separator#separator3 {
-						position: relative;
-						top: 69%;
-						left: 8%;
-						transform: rotate(350deg);
-					}
-				
-					.link {
-						font-size: 16px; /* 링크 폰트 사이즈 유지 */
-					}
-				
-					/* 링크 위치와 회전 상태 유지 */
-					#link1 {
-						top: 69%;
-						left: 20%;
-						transform: rotate(11deg);
-					}
-				
-					
-					#link2 {
-						top: 68.9%;
-						right: 17%;
-						transform: rotate(350deg);
-					}
-				}
-					
-					#link3 {
-						top: 70%;
-						left: 38%;
-						transform: rotate(1deg);
-					}
-					
-					#link4 {
-						top: 70%;
-						right: 37%;
-						transform: rotate(356deg);
-					}
-					
-				
-					.separator {
-						font-size: 24px; /* 분리 기호 크기 유지 */
-					}
-				
-		
+#link2 {
+    top: 69.4%;
+    right: 37.5%;
+    transform: rotate(349deg);
+}
+
+#link3 {
+    bottom: 23.8%;
+    left: 45.3%;
+    transform: rotate(2deg);
+}
+
+#link4 {
+    bottom: 23.8%;
+    right: 45%;
+    transform: rotate(356deg);
+}
+
+.link:hover {
+    color: #ffdd00;
+    text-shadow: 
+        0px 0px 10px rgba(255, 221, 0, 0.8),
+        0px 0px 20px rgba(255, 221, 0, 0.8),
+        0px 0px 30px rgba(255, 221, 0, 0.8);
+}
+
+#footer a {
+    color: rgba(255, 255, 255, 0.65);
+    transition: color .25s ease-in-out;
+}
+
+#footer a:hover {
+    color: white;
+}
+
+#footer .copyright {
+    list-style: none;
+    padding-left: 0;
+}
+
+#footer .copyright li {
+    display: inline-block;
+    padding-left: 1em;
+    margin-left: 1em;
+    border-left: solid 1px rgba(255, 255, 255, 0.25);
+    line-height: 1;
+}
+
+#footer .copyright li:first-child {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: 0;
+}
+
+/* 모바일 스타일 (미디어 쿼리) */
+@media screen and (max-width: 736px) {
+    /* 모바일 화면에서 PC 버전 레이아웃 유지 */
+    body {
+        overflow-x: hidden; /* 화면 가로로 이동 방지 */
+    }
+    
+    #footer {
+        font-size: 0.75em; /* PC 버전의 폰트 크기를 유지 */
+        padding: 2em 0 0 0; /* 패딩 유지 */
+    }
+
+    .separator {
+        margin: 0 10px; /* 링크 간의 간격을 조정 */
+        font-size: 16px; /* | 기호 크기 조정 */
+        position: relative;
+        display: inline-block; /* inline-block으로 위치 조정 */
+    }
+
+    .separator#separator1 {
+        position: relative;
+        top: 69%;
+        right: 8%;
+        transform: rotate(9deg);
+    }
+
+    .separator#separator2 {
+        position: relative;
+        top: 69.8%;
+        right: 0%;
+        transform: rotate(0deg);
+    }
+
+    .separator#separator3 {
+        position: relative;
+        top: 69%;
+        left: 8%;
+        transform: rotate(350deg);
+    }
+
+    .link {
+        font-size: 16px; /* 링크 폰트 사이즈 유지 */
+    }
+
+    /* 링크 위치와 회전 상태 유지 */
+    #link1 {
+        top: 69%;
+        left: 20%;
+        transform: rotate(11deg);
+    }
+
+    #link2 {
+        top: 68.9%;
+        right: 17%;
+        transform: rotate(350deg);
+    }
+
+    #link3 {
+        top: 70%;
+        left: 38%;
+        transform: rotate(1deg);
+    }
+
+    #link4 {
+        top: 70%;
+        right: 37%;
+        transform: rotate(356deg);
+    }
+
+    .separator {
+        font-size: 16px; /* 분리 기호 크기 유지 */
+    }
+}
