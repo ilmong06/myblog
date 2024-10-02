@@ -4,6 +4,7 @@
 @import url("fontawesome-all.min.css");
 
 
+
 /*
 	Astral by HTML5 UP
 	html5up.net | @ajlkn
@@ -653,72 +654,18 @@ input, select, textarea {
     border-left: 0;
 }
 
-/* 모바일 스타일 (미디어 쿼리) */
-@media screen and (max-width: 736px) {
-    /* 모바일 화면에서 PC 버전 레이아웃 유지 */
-    body {
-        overflow-x: hidden; /* 화면 가로로 이동 방지 */
-    }
-    
+.link-to-hide {
+    display: none;
+}
 
-    .separator {
-        margin: 0 10px; /* 링크 간의 간격을 조정 */
-        font-size: 16px; /* | 기호 크기 조정 */
-        position: relative;
-        display: inline-block; /* inline-block으로 위치 조정 */
+/* 모바일 버전에서 링크를 숨기기 위해 미디어 쿼리 사용 */
+@media (max-width: 768px) {
+    .link-to-hide {
+		position: relative; 
+		top: 77.4%;
+        display: block;
     }
-
-    .separator#separator1 {
-        position: relative;
-        top: 69%;
-        right: 8%;
-        transform: rotate(9deg);
-    }
-
-    .separator#separator2 {
-        position: relative;
-        top: 69.8%;
-        right: 0%;
-        transform: rotate(0deg);
-    }
-
-    .separator#separator3 {
-        position: relative;
-        top: 69%;
-        left: 8%;
-        transform: rotate(350deg);
-    }
-
-    .link {
-        font-size: 16px; /* 링크 폰트 사이즈 유지 */
-    }
-
-    /* 링크 위치와 회전 상태 유지 */
-    #link1 {
-        top: 69%;
-        left: 20%;
-        transform: rotate(11deg);
-    }
-
-    #link2 {
-        top: 68.9%;
-        right: 17%;
-        transform: rotate(350deg);
-    }
-
-    #link3 {
-        top: 70%;
-        left: 38%;
-        transform: rotate(1deg);
-    }
-
-    #link4 {
-        top: 70%;
-        right: 37%;
-        transform: rotate(356deg);
-    }
-
-    .separator {
-        font-size: 16px; /* 분리 기호 크기 유지 */
-    }
+	.custom-links{
+		display: none;
+	}
 }
