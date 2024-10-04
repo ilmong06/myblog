@@ -1,6 +1,5 @@
-// login.js
 import { auth } from './firebase.js';  // firebase.js에서 auth 가져오기
-import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js';
+import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js';  // 추가된 부분
 
 const loginForm = document.getElementById('loginForm');
 
@@ -11,7 +10,7 @@ loginForm.addEventListener('submit', async (event) => {
   const password = document.getElementById('password').value;
 
   try {
-    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);  // 추가된 부분
     const user = userCredential.user;
 
     alert('Logged in successfully!');
