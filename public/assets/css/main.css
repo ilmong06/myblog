@@ -2,7 +2,7 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 @import url("fontawesome-all.min.css");
-
+@import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
 
 
 /*
@@ -49,10 +49,25 @@ footer, header, hgroup, menu, nav, section {
 		font-weight: normal;
 		font-style: normal;
 	}
-
+	@font-face {
+		font-family: 'Galmuri7';
+		font-style: normal;
+		font-stretch: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: local('Galmuri7 Regular'),
+			 url('./Galmuri7.woff2') format('woff2'),
+			 url('./Galmuri7.ttf') format('truetype');
+	  }
+	  @font-face {
+		font-family: 'DOSMyungjo';
+		src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
 body {
 	line-height: 1;
-	font-family:  'Calibri','ChosunGs';
+	font-family:  'Calibri','ChosunGs','Galmuri7','DOSMyungjo';
 }
 
 ol, ul {
@@ -169,7 +184,7 @@ input, select, textarea {
 	h1 {
 		font-size: 2.4em; /* 글자 크기 */
 		letter-spacing: -0.015em; /* 글자 간격 */
-		font-family: 'ChosunGs'; /* 폰트 */
+		font-family: 'Galmuri7'; /* 폰트 */
 		padding: 10px;
 		color: #fff; /* 글자 색 */
 		text-shadow: 
@@ -612,7 +627,7 @@ input, select, textarea {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    font-family: 'ChosunGs';
+    font-family: 'DOSMyungjo';
     transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
 }
 
