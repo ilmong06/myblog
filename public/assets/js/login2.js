@@ -14,7 +14,7 @@ loginForm.addEventListener('submit', async (event) => {
     const user = userCredential.user;
 
     alert('Logged in successfully!');
-    window.location.href = '/dashboard.html';  // 대시보드 페이지로 리디렉션
+    window.location.href = '/';  // 대시보드 페이지로 리디렉션
 
   } catch (error) {
     console.error('Error logging in: ', error);
