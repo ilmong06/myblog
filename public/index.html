@@ -31,13 +31,13 @@
         <a href="https://yourlink.com" class="link-to-hide" id="desktopLink">pc버전</a>
         <div class="auth-buttons"></div>
 
-        <a href="/html/sign-up2.html" class="join">join</a>
         <form id="loginForm" class="login">
             <input type="email" id="email" placeholder="Email" required><br>
             <input type="password" id="password" placeholder="Password" required><br>
             <button type="submit">Login</button>
         </form>
         <a href="javascript:void(0);" id="logoutLink" class="logout">logout</a>
+        <a href="/html/sign-up2.html" class="join">join</a>
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
@@ -65,12 +65,18 @@
           // 사용자 인증 상태 변경 리스너
           onAuthStateChanged(auth, (user) => {
               const welcomeMessageDiv = document.getElementById('welcomeMessage');
-  
+              const loginForm = document.getElementById('loginForm');
+              const logoutLink = document.getElementById('logoutLink');
+
               if (user) {
                   const displayName = user.displayName || user.email.split('@')[0];
                   welcomeMessageDiv.innerHTML = `<h2>${displayName}님! 안녕하세요!</h2>`;
+                  loginForm.style.display = 'none'; // 로그인 폼 숨기기
+                  logoutLink.style.display = 'block'; // 로그아웃 링크 보이기
               } else {
                   welcomeMessageDiv.innerHTML = '<h2>로그인하지 않으셨습니다.</h2>';
+                  loginForm.style.display = 'block'; // 로그인 폼 보이기
+                  logoutLink.style.display = 'none'; // 로그아웃 링크 숨기기
               }
           });
   
