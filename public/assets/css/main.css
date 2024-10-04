@@ -562,7 +562,16 @@ input, select, textarea {
     padding: 2em 0 0 0;
     font-size: 0.75em;
 }
-.join, .login,.logout {
+.welcomeMessage{
+	position: absolute;
+	font-family: 'Galmuri7';
+	font-size: 7px;
+	left: 50%;
+	transform: translate(-50%, -50%); /* 정확히 가운데로 이동 */
+	top: 95%;  /* 회원가입 버튼 위치 */
+}
+.login,.logout {
+	font-family: 'Galmuri7';
 	position: absolute;
 	top: 80%;
 	left: 50%;
@@ -570,8 +579,12 @@ input, select, textarea {
   }
   
   .join {
-	top: 95%;  /* 회원가입 버튼 위치 */
-  }
+	font-family: 'Galmuri7';
+    position: fixed;  /* 고정 위치로 설정 */
+    bottom: 10px;     /* 하단에서 10px 간격 */
+    left: 10px;       /* 좌측에서 10px 간격 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
   
   .login {
 	top: 85%;  /* 로그인 버튼 위치 */
@@ -579,8 +592,20 @@ input, select, textarea {
   .logout {
 	top: 90%;  /* 로그인 버튼 위치 */
   }
+  .login-button {
+    font-family: 'Galmuri7';
+    background: none; 
+    border: none; 
+    color: #ffffff; 
+    font-size: 16px; 
+    cursor: pointer; 
+    padding: 0; 
+    text-decoration: underline; 
+    opacity: 0.8; 
+    align-self: flex-end; /* 버튼을 오른쪽으로 정렬 */
+}
 
-  .join:hover, .login:hover ,.logout:hover{
+  .join:hover,.logout:hover{
     color: #ffdd00;
     text-shadow: 
         0px 0px 10px rgba(255, 221, 0, 0.8),
@@ -629,7 +654,7 @@ input, select, textarea {
     position: absolute;
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 19px;
     font-family: 'DOSMyungjo';
     transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
 }
