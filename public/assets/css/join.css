@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url('assets/fonts/Calibri.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'EF_jejudoldam';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChosunGs';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Galmuri7';
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Galmuri7 Regular'),
+         url('./Galmuri7.woff2') format('woff2'),
+         url('./Galmuri7.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DOSMyungjo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%; /* html과 body의 높이를 100%로 설정 */
+    margin: 0; /* 기본 여백 제거 */
+}
+
+body {
+    line-height: 1;
+    font-family: 'Calibri', 'ChosunGs', 'Galmuri7', 'DOSMyungjo';
+    background-image: url("images/1.jpg"); /* 배경 이미지 설정 */
+    background-size: cover; /* 배경 이미지가 요소의 전체 영역을 차지하도록 설정 */
+    background-position: center; /* 배경 이미지 중앙 정렬 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+}
+
+.sign-up-container{
+    margin-top: 10px;
+    position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* 정확히 가운데로 이동 */
+}
+.sign-up-container h2 {
+     font-family: 'DOSMyungjo';
+    color: #fff; /* 글자 색 */
+    text-align: center;
+		text-shadow: 
+			0px 0px 2px rgba(255, 255, 255, 0.2), /* 가장 가까운 그림자 */
+			0px 0px 4px rgba(255, 255, 255, 0.2), /* 조금 더 퍼진 그림자 */
+			0px 0px 6px rgba(255, 255, 255, 0.2), /* 더 퍼진 그림자 */
+			0px 0px 8px rgba(255, 255, 255, 0.2); /* 더 퍼진 그림자 */
+}
+#signUpForm input {
+    margin-bottom: 7px; 
+    padding: 5px;
+    width: 300px;
+    box-sizing: border-box; 
+}
