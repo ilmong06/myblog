@@ -562,7 +562,7 @@ input, select, textarea {
     padding: 2em 0 0 0;
     font-size: 0.75em;
 }
-.join, .login {
+.join, .login,.logout {
 	position: absolute;
 	top: 80%;
 	left: 50%;
@@ -576,8 +576,11 @@ input, select, textarea {
   .login {
 	top: 85%;  /* 로그인 버튼 위치 */
   }
+  .logout {
+	top: 90%;  /* 로그인 버튼 위치 */
+  }
 
-  .join:hover, .login:hover {
+  .join:hover, .login:hover ,.logout:hover{
     color: #ffdd00;
     text-shadow: 
         0px 0px 10px rgba(255, 221, 0, 0.8),

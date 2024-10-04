@@ -1,87 +1,84 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>ilmongc</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!-- 자바스크립트가 비활성화된 경우 CSS 적용 -->
-		<noscript><link rel="stylesheet" href="oscript.css" /></noscript>
-		<!-- 메인 CSS 파일 경로 확인 (assets/css/main.css) -->
-		<link rel="stylesheet" href="assets/css/main.css">
-	</head>
-	<body class="is-preload">
+<head>
+    <title>ilmongc</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <noscript><link rel="stylesheet" href="oscript.css" /></noscript>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper-->
-			<div id="wrapper">
-				<!-- Main -->
-				<h1>M O O Z O M B I E</h1>
+    <div id="wrapper">
+        <h1>M O O Z O M B I E</h1>
 
-				<!-- Footer -->
-				<div id="footer">
-					<ul class="copyright">
-						<li>&copy; Moonfall 2022 Movies Wallpaper</li>
-					</ul>
-					
-					<!-- 개별 위치 조정된 링크들 -->
-					<div class="custom-links">
-						<a href="https://www.instagram.com/moozombi/" class="link" id="link1">insta</a>
-						<span class="separator" id="separator1">|</span>
-						<a href="https://github.com/ilmong06" class="link" id="link2">github</a>
-						<span class="separator" id="separator2">|</span>
-						<a href="#" class="link" id="link3">blog</a>
-						<span class="separator" id="separator3">|</span>
-						<a href="https://velog.io/@ilmongcode/posts" class="link" id="link4">velog</a>
-            <div class="link" id="welcomeMessage"></div>
-					</div>
-				</div>
+        <div id="footer">
+            <ul class="copyright">
+                <li>&copy; Moonfall 2022 Movies Wallpaper</li>
+            </ul>
+            <div class="custom-links">
+                <a href="https://www.instagram.com/moozombi/" class="link" id="link1">insta</a>
+                <span class="separator" id="separator1">|</span>
+                <a href="https://github.com/ilmong06" class="link" id="link2">github</a>
+                <span class="separator" id="separator2">|</span>
+                <a href="#" class="link" id="link3">blog</a>
+                <span class="separator" id="separator3">|</span>
+                <a href="https://velog.io/@ilmongcode/posts" class="link" id="link4">velog</a>
+                <div class="link" id="welcomeMessage"></div>
+            </div>
+        </div>
 
-				<!-- Additional Links -->
-				<a href="https://yourlink.com" class="link-to-hide" id="desktopLink">pc버전</a>
-				<div class="auth-buttons"></div>
+        <a href="https://yourlink.com" class="link-to-hide" id="desktopLink">pc버전</a>
+        <div class="auth-buttons"></div>
 
-				<!-- 회원가입 및 로그인 버튼 -->
+        <a href="/html/sign-up2.html" class="join">join</a>
+        <a href="/html/login2.html" class="login">login</a>
+        <a href="javascript:void(0);" id="logoutLink" class="logout">logout</a>
+    </div>
 
-				<a href="/html/sign-up2.html" class="join" >join</a>
-        <a href="/html/login2.html" class="login" >login</a>
-			</div>
-
-			
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-      <script type="module">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js';
-        import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js';
+        import { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js';
 
-        // Firebase configuration
         const firebaseConfig = {
-          apiKey: 'AIzaSyAfiRIkNZesOTlkfQTWizBqdDkjmWJQvRo',
-          apiKey: "AIzaSyAfiRIkNZesOTlkfQTWizBqdDkjmWJQvRo",
-          authDomain: "ilmongblog.firebaseapp.com",
-          projectId: "ilmongblog",
-          storageBucket: "ilmongblog.appspot.com",
-          messagingSenderId: "25466040786",
-          appId: "1:25466040786:web:24b5dd6019a7118a80d80b"
+            apiKey: 'AIzaSyAfiRIkNZesOTlkfQTWizBqdDkjmWJQvRo',
+            authDomain: "ilmongblog.firebaseapp.com",
+            projectId: "ilmongblog",
+            storageBucket: "ilmongblog.appspot.com",
+            messagingSenderId: "25466040786",
+            appId: "1:25466040786:web:24b5dd6019a7118a80d80b"
         };
 
-        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        // Check user authentication state
-        onAuthStateChanged(auth, (user) => {
-            const welcomeMessageDiv = document.getElementById('welcomeMessage');
+        document.addEventListener('DOMContentLoaded', () => {
+            onAuthStateChanged(auth, (user) => {
+                const welcomeMessageDiv = document.getElementById('welcomeMessage');
 
-            if (user) {
-                // Display name or email
-                const displayName = user.displayName || user.email.split('@')[0];
-                welcomeMessageDiv.innerHTML = `<h2>${displayName}님! 안녕하세요!</h2>`;
-            } else {
-                welcomeMessageDiv.innerHTML = '<h2>로그인하지 않으셨습니다.</h2>';
-            }
+                if (user) {
+                    const displayName = user.displayName || user.email.split('@')[0];
+                    welcomeMessageDiv.innerHTML = `<h2>${displayName}님! 안녕하세요!</h2>`;
+                } else {
+                    welcomeMessageDiv.innerHTML = '<h2>로그인하지 않으셨습니다.</h2>';
+                }
+            });
+
+            // 로그아웃 처리
+            document.getElementById('logoutLink').addEventListener('click', (event) => {
+                event.preventDefault(); // 기본 링크 클릭 동작 방지
+                signOut(auth).then(() => {
+                    window.location.href = "/"; // Redirect to homepage or desired page
+                }).catch((error) => {
+                    console.error("로그아웃 중 오류 발생:", error);
+                });
+            });
         });
     </script>
-	</body>
+</body>
 </html>
